@@ -9,7 +9,6 @@ import { useFela } from "react-fela";
 import { RRule } from "rrule";
 
 import {
-  Container,
   Flex,
   HStack,
   VStack,
@@ -225,7 +224,7 @@ export default function Calendar() {
 
   const handleSelectSlot = ({ start, end }) => {
     // month: start=end, day: start+1hr=end
-    if (start === end) {
+    if (viewMode === "month" || start === end) {
       // date selection in month view
       if (isUnavailable(start)) return;
 
@@ -441,7 +440,7 @@ export default function Calendar() {
         {viewMode === "month" && (
           <HStack spacing={4} mt={4}>
             <Text mr="6px">By weekday: </Text>
-            <CheckboxGroup
+            {/* <CheckboxGroup
               value={blockRepeatByWeekdays}
               onChange={(value) => setBlockRepeatByWeekdays(value)}
             >
@@ -458,7 +457,7 @@ export default function Calendar() {
                   </Checkbox>
                 ))}
               </SimpleGrid>
-            </CheckboxGroup>
+            </CheckboxGroup> */}
           </HStack>
         )}
         {viewMode === "month" && (
