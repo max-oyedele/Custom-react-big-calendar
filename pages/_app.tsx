@@ -8,11 +8,9 @@ import { createRenderer } from 'fela'
 import { RendererProvider } from "react-fela";
 const renderer = createRenderer();
 
-import theme from "styles/theme";
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <RendererProvider renderer={renderer}>
         <Component {...pageProps} />
       </RendererProvider>

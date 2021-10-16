@@ -532,7 +532,7 @@
     "@chakra-ui/checkbox" "1.5.8"
     "@chakra-ui/utils" "1.8.3"
 
-"@chakra-ui/system@1.7.4", "@chakra-ui/system@^1.7.3":
+"@chakra-ui/system@1.7.4":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@chakra-ui/system/-/system-1.7.4.tgz#183917e3c2cd81ab8c1591c7d7b741cf69c575cc"
   integrity sha512-YZMPP+OCuV5edxXuwDPP7TEVl13Kziq0vf/GjgnCizcgUImSRL9eUaPcF4INvGbvS/rcAeG9mZn26DMpFwVV7g==
@@ -577,7 +577,7 @@
     "@chakra-ui/form-control" "1.4.2"
     "@chakra-ui/utils" "1.8.3"
 
-"@chakra-ui/theme-tools@1.2.2", "@chakra-ui/theme-tools@^1.2.0", "@chakra-ui/theme-tools@^1.2.1":
+"@chakra-ui/theme-tools@1.2.2", "@chakra-ui/theme-tools@^1.2.1":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/theme-tools/-/theme-tools-1.2.2.tgz#22feef17ee764f5989235c29f5ee3ffd25066f3a"
   integrity sha512-+2xPTW7/rFr++Qu/ibZsM1dq5qmvvjg6+Af4SRZw1AvjGq4CTxuV7upXo5zJM3Q3OgzOtU9Q9RATap3fhEHkyA==
@@ -585,7 +585,7 @@
     "@chakra-ui/utils" "1.8.3"
     "@ctrl/tinycolor" "^3.4.0"
 
-"@chakra-ui/theme@1.10.4", "@chakra-ui/theme@^1.10.1":
+"@chakra-ui/theme@1.10.4":
   version "1.10.4"
   resolved "https://registry.yarnpkg.com/@chakra-ui/theme/-/theme-1.10.4.tgz#6d1a39066a3a2e9e073455204b880af0acf6067f"
   integrity sha512-FaO5Qr1oGP+1JoCIotoqWT9RF0aguXmKjgz+4xDM8E+Gct6juuj+td43NfzeXr/FJXiXjL8u1G4RWxAeR2FxZQ==
