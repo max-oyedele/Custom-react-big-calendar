@@ -22,7 +22,7 @@ const allViews: View[] = ['month', 'day', 'agenda'];
 const defaultViewMode = "month";
 
 const DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-const Hours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
+const HOURS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
 
 const availableColor = "#3e9f31";
 const partialColor = "#31679f";
@@ -48,8 +48,8 @@ const rruleWeekdayMap = {
 }
 
 export default function Calendar({
-  type,
-  blockedEvents,
+  type="host",
+  blockedEvents=[],
   form,
   loading,
   handleAddScheduleEvent,
@@ -69,16 +69,16 @@ export default function Calendar({
 
   const [bookEvents, setBookEvents] = useState<any[]>([]);
 
-  useEffect(() => {
-    setBlockEvents(convertBlockEventsToDateType(blockedEvents))
-  }, [blockedEvents]);
+  // useEffect(() => {
+  //   setBlockEvents(convertBlockEventsToDateType(blockedEvents))
+  // }, [blockedEvents]);
 
-  const convertBlockEventsToDateType = (blockedEvents) => {
-    return blockedEvents.map(e => ({
-      start: moment(e.start).toDate(),
-      end: moment(e.end).toDate(),
-    }))
-  }
+  // const convertBlockEventsToDateType = (blockedEvents) => {
+  //   return blockedEvents.map(e => ({
+  //     start: moment(e.start).toDate(),
+  //     end: moment(e.end).toDate(),
+  //   }))
+  // }
 
   useEffect(() => {
     if (viewMode === "month" && blockRepeatMonthFreq === "no") return; // no repeat
@@ -446,7 +446,7 @@ export default function Calendar({
             <Text>By hour(~1h): </Text>
             <SimpleGrid columns={3} columnGap={4} rowGap={2}>
               {
-                Hours.map((hour) => (
+                HOURS.map((hour) => (
                   <Center
                     key={hour}
                     bgColor={blockRepeatByHours.includes(hour) ? "darkgray" : "transparent"}
